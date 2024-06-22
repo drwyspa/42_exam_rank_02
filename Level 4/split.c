@@ -6,7 +6,7 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/21 18:12:13 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/06/21 20:12:15 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/06/22 15:23:08 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,16 +22,14 @@ char	**ft_split(char *str)
 
 	i = 0;
 	k = 0;
-	split = (char **)malloc(sizeof(char *) * 256);
-	if (!split)
+	if (!(split = (char **)malloc(sizeof(char *) * 256)))
 		return (NULL);
 	while (str[i] <= 32)
 		i++;
 	while (str[i])
 	{
 		j = 0;
-		split[k] = (char *)malloc(sizeof(char) * 4096);
-		if (!split)
+		if (!(split[k] = (char *)malloc(sizeof(char) * 4096)));
 			return (NULL);
 		while (str[i] && str[i] > 32)
 			split[k][j++] = str[i++];
