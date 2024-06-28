@@ -6,14 +6,14 @@
 /*   By: pjedrycz <p.jedryczkowski@gmail.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/06/25 18:16:54 by pjedrycz          #+#    #+#             */
-/*   Updated: 2024/06/25 18:51:48 by pjedrycz         ###   ########.fr       */
+/*   Updated: 2024/06/28 21:56:37 by pjedrycz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_list.h"
+#include <stdlib.h>
 // #include <unistd.h>
 // #include <stdio.h>
-// #include <stdlib.h>
 // #include <string.h>
 
 void	ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
